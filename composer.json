@@ -1,5 +1,5 @@
 {
-    "name": "sylius/report",
+    "name": "fosyl/report",
     "type": "library",
     "description": "Report system, based on data fetchers and renderers.",
     "keywords": ["shop", "ecommerce", "report", "data fetcher", "renderer"],
@@ -19,6 +19,10 @@
             "email": "mateusz.zalewski@lakion.com"
         },
         {
+            "name": "Adam Elsodaney",
+            "email": "adam.elso@gmail.com"
+        },
+        {
             "name": "Sylius project",
             "homepage": "http://sylius.org"
         },
@@ -28,34 +32,30 @@
         }
     ],
     "require": {
-        "php": "^5.6|^7.0",
+        "php": "^7.0",
 
         "sylius/registry": "^1.0",
         "sylius/resource": "^1.0"
     },
     "require-dev": {
-        "phpspec/phpspec": "^3.0"
-    },
-    "suggest": {
-        "symfony/templating": "~2.3"
+        "phpspec/phpspec": "^4.0",
+        "phpunit/phpunit": "^6.3",
+        "doctrine/orm": "^2.5"
     },
     "config": {
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-4": { "Sylius\\Component\\Report\\": "" }
+        "psr-4": { "Fosyl\\ReportOne\\": "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "Sylius\\Component\\Report\\spec\\": "spec/" }
+        "psr-4": {
+            "spec\\Fosyl\\ReportOne\\": "spec/",
+            "test\\Fosyl\\ReportOne\\": "test/"
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../../*/*"
-        }
-    ],
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
